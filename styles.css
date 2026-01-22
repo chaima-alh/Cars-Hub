@@ -6,24 +6,24 @@
 }
 
 :root {
-    --primary-color: #2563eb;
+    --primary-color: #566891;
     --secondary-color: #1e40af;
     --accent-color: #f59e0b;
     --dark-bg: #0f172a;
     --light-bg: #f8fafc;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --border-color: #e2e8f0;
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --border-color: #334155;
     --success-color: #10b981;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 6px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    background-color: var(--light-bg);
+    background-color: #000000;
 }
 
 .container {
@@ -70,7 +70,7 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-primary);
+    color: #000000;
     font-weight: 500;
     transition: color 0.3s;
     position: relative;
@@ -102,10 +102,14 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 8rem 2rem;
+    padding: 5rem 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero::before {
@@ -120,6 +124,19 @@ body {
     opacity: 0.3;
 }
 
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    transition: background-image 1s ease-in-out;
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -131,6 +148,7 @@ body {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
@@ -155,19 +173,21 @@ body {
 }
 
 .btn-primary {
-    background: var(--accent-color);
+    background: #ff6b35;
     color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .btn-primary:hover {
-    background: #d97706;
+    background: #e55a2b;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
 }
 
 /* Cars Section */
 .cars-section {
     padding: 5rem 0;
+    background: #1a1a1a;
 }
 
 .search-sort-container {
@@ -314,22 +334,24 @@ body {
 
 .filter-btn {
     padding: 0.6rem 1.2rem;
-    border: 2px solid var(--border-color);
-    background: white;
+    border: 2px solid #e2e8f0;
+    background: #f8fafc;
     border-radius: 2rem;
     cursor: pointer;
     font-weight: 500;
     transition: all 0.3s;
-    color: var(--text-primary);
+    color: #374151;
     font-size: 0.9rem;
     white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: var(--primary-color);
+    background: #ff6b35;
     color: white;
-    border-color: var(--primary-color);
+    border-color: #ff6b35;
+    box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
 }
 
 .cars-grid {
@@ -339,12 +361,13 @@ body {
 }
 
 .car-card {
-    background: white;
+    background: black;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s;
     position: relative;
+    border: 1px solid #333;
 }
 
 .car-card:hover {
@@ -405,12 +428,12 @@ body {
 .car-name {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--text-primary);
+    color: white;
 }
 
 .car-price {
     font-size: 1.25rem;
-    color: var(--primary-color);
+    color: #ff6b35;
     font-weight: bold;
 }
 
@@ -419,7 +442,7 @@ body {
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 1rem;
-    color: var(--text-secondary);
+    color: #cbd5e1;
     font-size: 0.9rem;
 }
 
@@ -466,7 +489,7 @@ body {
 /* Compare Section */
 .compare-section {
     padding: 5rem 0;
-    background: white;
+    background: #1a1a1a;
 }
 
 .compare-container {
@@ -640,7 +663,7 @@ body {
 /* Recent Section */
 .recent-section {
     padding: 5rem 0;
-    background: white;
+    background: #1a1a1a;
 }
 
 .recent-grid {
@@ -710,7 +733,7 @@ body {
 
 .modal-car-image {
     width: 100%;
-    height: 300px;
+    height: 200px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     align-items: center;

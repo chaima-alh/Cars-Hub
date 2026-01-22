@@ -1388,3 +1388,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Rotating hero background images
+let currentImageIndex = 0;
+const heroBackground = document.getElementById('hero-background');
+
+function changeHeroImage() {
+    if (heroBackground) {
+        heroBackground.style.backgroundImage = `url('${cars[currentImageIndex].image}')`;
+        currentImageIndex = (currentImageIndex + 1) % cars.length;
+    }
+}
+
+// Start rotating images every 3 seconds
+setInterval(changeHeroImage, 3000);
+
+// Set initial image
+changeHeroImage();
