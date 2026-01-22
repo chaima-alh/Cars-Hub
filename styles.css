@@ -6,24 +6,24 @@
 }
 
 :root {
-    --primary-color: #566891;
+    --primary-color: #2563eb;
     --secondary-color: #1e40af;
     --accent-color: #f59e0b;
     --dark-bg: #0f172a;
     --light-bg: #f8fafc;
-    --text-primary: #ffffff;
-    --text-secondary: #cbd5e1;
-    --border-color: #334155;
+    --text-primary: #1e293b;
+    --text-secondary: #0d0f13;
+    --border-color: #e2e8f0;
     --success-color: #10b981;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 6px 15px -3px rgba(0, 0, 0, 0.3);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    background-color: #000000;
+    background-color: var(--light-bg);
 }
 
 .container {
@@ -187,7 +187,7 @@ body {
 /* Cars Section */
 .cars-section {
     padding: 5rem 0;
-    background: #1a1a1a;
+    background: var(--light-bg);
 }
 
 .search-sort-container {
@@ -361,13 +361,12 @@ body {
 }
 
 .car-card {
-    background: black;
+    background: white;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s;
     position: relative;
-    border: 1px solid #333;
 }
 
 .car-card:hover {
@@ -428,7 +427,7 @@ body {
 .car-name {
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: var(--text-primary);
 }
 
 .car-price {
@@ -442,7 +441,7 @@ body {
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 1rem;
-    color: #cbd5e1;
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
@@ -489,7 +488,7 @@ body {
 /* Compare Section */
 .compare-section {
     padding: 5rem 0;
-    background: #1a1a1a;
+    background: var(--light-bg);
 }
 
 .compare-container {
@@ -923,7 +922,7 @@ body {
 }
 
 .newsletter-signup input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(15, 6, 6, 0.6);
 }
 
 .newsletter-signup input:focus {
@@ -940,7 +939,7 @@ body {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(15, 1, 1, 0.6);
 }
 
 /* Animations */
